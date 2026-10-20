@@ -8,10 +8,6 @@
 
 PrideGTS（Pride GNSS Time Series Analysis Software）是基于MATLAB的开源GNSS坐标时间序列分析软件，在同一个图形界面中完成从多源坐标文件输入到参数估计的处理。
 
-<p align="center">
-  <img src="docs/images/workflow.png" width="85%" alt="PrideGTS处理流程">
-</p>
-
 ## 主要功能
 
 - 读取PBO（`.pos`）、NGL（`.tenv3`）和CMONOC（`.txt`）坐标文件，转换为Hector兼容的`.mom`文件
@@ -49,10 +45,6 @@ PrideGTS包含以下第三方代码，各组件保留其原有的版权声明。
 | vbICA 1.0和Netlab | Choudrey (2003); Nabney (1996–2001) | 见原始发布；BSD-3-Clause |
 | RegEM | Schneider (2001) | 见原始发布 |
 | GMIS（KKF） | Liu et al. (2018) | 见原始发布 |
-
-## 引用
-
-Huang X, Liu L, Liao C, Yao C, Huang L, Li J (in preparation) PrideGTS: an open-source MATLAB-based software for GNSS coordinate time series analysis. To be submitted to GPS Solutions (GPS Toolbox).
 
 ## 许可证
 
