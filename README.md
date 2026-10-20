@@ -8,10 +8,6 @@
 
 PrideGTS (Pride GNSS Time Series Analysis Software) is open-source MATLAB software for GNSS coordinate time series analysis. In one graphical interface it covers the processing from multi-source coordinate file input to parameter estimation.
 
-<p align="center">
-  <img src="docs/images/workflow.png" width="85%" alt="PrideGTS workflow">
-</p>
-
 ## Features
 
 - Reads PBO (`.pos`), NGL (`.tenv3`) and CMONOC (`.txt`) coordinate files and converts them to Hector-compatible `.mom` files
@@ -49,10 +45,6 @@ PrideGTS includes the following third-party code. Each component keeps its origi
 | vbICA 1.0 and Netlab | Choudrey (2003); Nabney (1996–2001) | See original distribution; BSD-3-Clause |
 | RegEM | Schneider (2001) | See original distribution |
 | GMIS (KKF) | Liu et al. (2018) | See original distribution |
-
-## Citation
-
-Huang X, Liu L, Liao C, Yao C, Huang L, Li J (in preparation) PrideGTS: an open-source MATLAB-based software for GNSS coordinate time series analysis. To be submitted to GPS Solutions (GPS Toolbox).
 
 ## License
 
