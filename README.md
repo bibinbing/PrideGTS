@@ -1,7 +1,5 @@
 # PrideGTS
 
-**English** 
-
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2022b%2B-orange)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)
 ![License](https://img.shields.io/badge/license-GPL--3.0-green)
