@@ -1,6 +1,6 @@
 # PrideGTS
 
-**English** | [简体中文](README_zh-CN.md)
+**English** 
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2022b%2B-orange)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)
