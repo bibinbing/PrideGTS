@@ -36,13 +36,14 @@ PrideGTS incorporates the following third-party source code. The repository keep
 
 | Component | Reference | License | Notes |
 |---|---|---|---|
-| Hector 2.1 | Bos et al. (2013) | GPL-3.0-or-later | Explicit GPL notice appears in the upstream source distribution |
-| FastICA 2.5 | Hyvärinen (1999) | GPL-2.0-or-later | Included as a third-party algorithm in this repository |
-| VBRPCA | Babacan et al. (2012) | GPL-3.0-or-later | Explicit GPL notice is present in the source header |
-| VBPCA | Ilin and Raiko (2010) | See original distribution | Upstream license text should be verified in the original source distribution |
-| vbICA 1.0 and Netlab | Choudrey (2003); Nabney (1996–2001) | See original distribution; BSD-3-Clause | License terms depend on the original distribution |
-| RegEM | Schneider (2001) | See original distribution | Upstream license text should be verified in the original source distribution |
-| GMIS (KKF) | Liu et al. (2018) | See original distribution | Upstream license text should be verified in the original source distribution |
+| Hector 2.1 | Bos et al. (2013) | GPL-3.0-or-later | Windows executables; source at https://teromovigo.com/product/hector |
+| FastICA 2.5 | Hyvärinen (1999) | GPL-2.0-or-later | Copyright notice kept in source |
+| VBRPCA | Babacan et al. (2012) | GPL-3.0-or-later | GPL notice kept in source header |
+| VBPCA | Ilin and Raiko (2010) | No license stated | Copyright held by the original authors |
+| vbICA 1.0 and Netlab | Choudrey (2003); Nabney (2002) | vbICA: no license stated; Netlab: BSD-3-Clause | Netlab `LICENSE` included; vbICA modified to handle missing data (NaN) |
+| RegEM | Schneider (2001) | No license stated | Default parameters modified |
+| GMIS (KKF) | Liu et al. (2018) | No license stated | Copyright held by the original authors https://doi.org/10.1007/s10291-017-0689-3 |
+
 
 ## License
 
