@@ -35,7 +35,7 @@ See the [user manual](doc/PrideGTS_Software_User_Manual_EN.pdf). It includes a s
 PrideGTS incorporates the following third-party source code. The repository keeps the original copyright notices in the corresponding source files whenever available. Components marked as "See original distribution" are included from their original upstream distributions; their full license terms should be checked in the original upstream project before redistribution or commercial reuse.
 
 | Component | Reference | License | Notes |
-|---|---|---|---|
+|----|----|----|----|
 | Hector 2.1 | Bos et al. (2013) | GPL-3.0-or-later | Windows executables; source at https://teromovigo.com/product/hector |
 | FastICA 2.5 | Hyvärinen (1999) | GPL-2.0-or-later | Copyright notice kept in source |
 | VBRPCA | Babacan et al. (2012) | GPL-3.0-or-later | GPL notice kept in source header |
