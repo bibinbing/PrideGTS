@@ -1,0 +1,236 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="978044279" file="D:\GNSSTools\PrideGTS\Install\PrideGTS.prj" location="D:\GNSSTools\PrideGTS\Install" name="PrideGTS" target="target.mlapps" target-name="打包为 App">
+    <param.appname>PrideGTS</param.appname>
+    <param.authnamewatermark>XianPeng Huang</param.authnamewatermark>
+    <param.email />
+    <param.company />
+    <param.icon>${PROJECT_ROOT}\PrideGTS_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\PrideGTS_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\PrideGTS_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\PrideGTS_resources\icon_16.png</file>
+    </param.icons>
+    <param.summary />
+    <param.description />
+    <param.screenshot>C:\Users\26403\AppData\Local\Temp\tp2bd7ff4e_2802_47b5_b4e7_4f29a8f885b2.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>54601dee-a10e-4c5f-8b4b-d564297a5b3b</param.guid>
+    <unset>
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\PrideGTS.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>D:\GNSSTools\PrideGTS\DisError\distcorr.m</file>
+      <file>D:\GNSSTools\PrideGTS\DisError\pridegts_lomb_psd.m</file>
+      <file>D:\GNSSTools\PrideGTS\estimatetrend.ctl</file>
+      <file>D:\GNSSTools\PrideGTS\FastICA\FastICA.m</file>
+      <file>D:\GNSSTools\PrideGTS\FastICA\fpica.m</file>
+      <file>D:\GNSSTools\PrideGTS\FastICA\pcamat.m</file>
+      <file>D:\GNSSTools\PrideGTS\FastICA\remmean.m</file>
+      <file>D:\GNSSTools\PrideGTS\FastICA\RunFastICA.m</file>
+      <file>D:\GNSSTools\PrideGTS\FastICA\whitenv.m</file>
+      <file>D:\GNSSTools\PrideGTS\GFZ\gfz_http_get.m</file>
+      <file>D:\GNSSTools\PrideGTS\GFZ\gfz_loading_download.m</file>
+      <file>D:\GNSSTools\PrideGTS\knownEvents\decyear2mjd.m</file>
+      <file>D:\GNSSTools\PrideGTS\knownEvents\parseCEAHeader.m</file>
+      <file>D:\GNSSTools\PrideGTS\knownEvents\writeKnownEventsToMom.m</file>
+      <file>D:\GNSSTools\PrideGTS\knownEvents\ymd2mjd.m</file>
+      <file>D:\GNSSTools\PrideGTS\knownEvents\yymmmdd2mjd.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_cand.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_chi2crit.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_classifyEvents.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_cleanSeries.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_date.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_decyr.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_defaults.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_design.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_detect.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_fit.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_flicker.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_inputs.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_knownEvents.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_noise.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_normalSolve.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_offsetTable.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_power.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_read.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_readMOM.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_stationThreshold.m</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\code\offset_txt.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\EMEst_filter.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\EMEst_smooth.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\fminsearchbnd.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\SemiVariog.fig</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\SemiVariog.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\SpatialFiled.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\trendpoly0.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\trendpoly1.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\trendpoly3.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\variog.m</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\variogramfit.m</file>
+      <file>D:\GNSSTools\PrideGTS\OutlierDetection\CommonIQR.m</file>
+      <file>D:\GNSSTools\PrideGTS\OutlierDetection\CommonMAD.m</file>
+      <file>D:\GNSSTools\PrideGTS\OutlierDetection\WindowIQR.m</file>
+      <file>D:\GNSSTools\PrideGTS\OutlierDetection\WindowMAD.m</file>
+      <file>D:\GNSSTools\PrideGTS\PCA\RunPCA.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\center.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\gcvfctn.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\gcvridge.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\iridge.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\kcv_ttls.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\kcvindices.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\missingness_patterns.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\mridge.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\nanmean.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\pca_truncation_criteria.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\peigs.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\pttls.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\regem.m</file>
+      <file>D:\GNSSTools\PrideGTS\RegEM\rescale.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\FB.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\gammas.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\hmm_mstep.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\hmmdecode1.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\init_MoG.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\init_MoG1.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\init_MoP.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\initialise_mix1d.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\learn_mix1d.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\log_ptilde1.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\MixModel1d\log_ptilde2.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\RunvbICA.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\Shared\init_vbica.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\Shared\initialise_ica.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\Shared\learn_matrix.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\Shared\learn_noise.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\Shared\NFEpos.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\Shared\rect_expect.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\Shared\update_alpha.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\Shared\update_mean.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\utils\digamma.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\utils\kmeans1.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\utils\plotMoE.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\utils\plotMoG.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\utils\plotRMoG.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\utils\rdiv.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\utils\rsum.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\utils\scalexp.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\vbICA2\learn_ica2.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\vbICA2\recon_source2.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBICA\vbICA2\vbica2.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\addmcols.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\addmrows.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\argschk.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\cf_full.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\compute_rms.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\converg_check.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\miscomb.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\rmempty.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\RunVBPCA.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBPCA\vbpca_full.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBRPCA\RunVBRPCA.m</file>
+      <file>D:\GNSSTools\PrideGTS\VBRPCA\VBRPCA.m</file>
+      <file>${MATLAB_ROOT}\examples\slrequirements\data\filter.png</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>D:\GNSSTools\PrideGTS\About\About.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\DataFormatting\DataFormatting.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\DataFormatting\FormatConverter.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\DataFormatting\logo</file>
+      <file>D:\GNSSTools\PrideGTS\DataFormatting\SD_Tolerence.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\Hector\exe</file>
+      <file>D:\GNSSTools\PrideGTS\Hector\Hector.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\Hector\logo</file>
+      <file>D:\GNSSTools\PrideGTS\Hector\PSDEstimation.mlapp</file>
+      <file>${PROJECT_ROOT}\logo</file>
+      <file>D:\GNSSTools\PrideGTS\knownEvents\KnownEventImport.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\knownEvents\logo</file>
+      <file>D:\GNSSTools\PrideGTS\MGLR\MGLR.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\GMIS\EMInterp_App.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\GMIS\GMIS_App.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\GMIS\SemiVariog_App.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\EMInterp.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\GMIS_App.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\Install\SemiVariog_App.mlapp</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\logo</file>
+      <file>D:\GNSSTools\PrideGTS\MissingDataReconstruction\MissingDataReconstruction.mlapp</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="D:\GNSSTools\PrideGTS" name="Install" optional="false">D:\GNSSTools\PrideGTS\Install</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>D:\Program\MATLAB</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

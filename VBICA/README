@@ -1,0 +1,239 @@
+Variational Bayesian Independent Component Analysis Package 1.0 
+(vbICA1.0)
+
+(c) Rizwan Choudrey 2003
+
+
+
+The vbICA1.0 suite of algorithms contains a variety of Independent Component Analysis (ICA) based models learnt using the variational Bayes framework. 
+
+
+
+***********************
+* Directory structure *
+***********************
+
+The models are separated into the following directories:
+
+
+MixModel1d  The set of MATLAB files to perform mixture modelling of a
+            one dimensional signal by variational Bayes. This can be
+            a Mixture of Gaussians ('g'), Mixture of Exponentials ('e')
+            , Mixture of zero-mean truncated Gaussians ('t') plus
+            Hidden Markov Model versions of these ('hg', 'he', 'ht').
+            These form the source models for the various vbICA models
+            below. See Chapters 4, 5, 7 of my thesis [1].
+
+
+vbICA1      The set of MATLAB files to perform ICA by variational Bayes
+            using a Gaussian posterior for the sources. Uses MixModel1d
+            as the source model. Detailed in Chapter 5 of my thesis 
+            [1] and in [2]. HMM source models in Chapter 7 of [1] and
+            in [5].
+	    
+
+vbICA2      The set of MATLAB files to perform ICA by variational Bayes
+            using a Mixture of Gaussians posterior for the sources. Uses 
+            MixModel1d as the source model. Detailed in Chapter 5 of my 
+            thesis [1] and in [2]. HMM source models in Chapter 7 of [1] 
+            and in [5].
+
+
+vbMoICA     The set of MATLAB files to perform Mixtures of ICA by 
+            variational Bayes. Uses vbICA2 as its basis. Can utilise any
+            of the source models in MixModel1d. Detailed in Chapter 5 of 
+            my thesis [1] and in [4].
+
+
+vbHMM       The set of MATLAB files to perform Mixtures of ICA by 
+            variational Bayes with a Hidden Markov Prior over the hidden 
+            mixture states. This gives a Hidden Markov Model with 
+            multivariate ICA observation generators. Uses vbICA2, vbMoICA              as its basis. Can utilise any of the source models in 
+            MixModel1d. Detailed in Chapter 5 of my thesis [1] and in [6].
+
+
+Shared      The set of MATLAB files shared by vbICA1 and vbICA2.
+
+
+utils       The set of MATLAB files needed for auxillary utilities and 
+            plotting of results.
+
+
+Demos       Demos of vbICA2 and vbMoICA
+
+
+
+
+The MATLAB function that runs each model has the same name as the directorythat it is in. For example, to learn a vbMoICA model, change to the vbMoICA directory and run vbmoica.m. Information on how to use a model can be found by typing 'help model_name'.
+
+
+
+
+*******************
+* Model Hierarchy *
+*******************
+
+
+
+                         ................
+                         :  MixModel1d  :
+                         :  'g' 'e' 't' :
+                         :'hg' 'he' 'ht':
+                         ................
+                        /                \ 
+           Mixture of  /  Source models   \ Gaussian 
+           Gaussians  /                    \ posterior
+           Posterior /                      \
+                 ........                ........  
+                 :vbICA2:                :vbICA1:
+                 ........                ........
+                    |
+                    |
+                    | Mixture model
+                    |
+                    |
+                .........  
+                :vbMoICA:
+                .........
+                    |
+                    |
+                    | Markov prior
+                    |
+                    | 
+                 .......
+                 :vbHMM:
+                 .......
+
+
+
+
+
+
+All of the models in the hierarchy can use 'g', 'e', 't', 'hg', 'he', 'ht' sources. However, the positive-only sources ('e','t','he','ht') are not as
+stable as the standard sources ('g', 'hg'). Why this is remains unclear, although random intialisation and a non-positive Gaussian noise model may have something to do with it. I'm afraid I'm at a loss at how to increase the stability of positive-only vbICA in all circumstances. James Miskin has done extensive work on non-negative ICA (in vbICA1 form), but I have not been able to pick up any clues from his code. If positivity is crucial, then his code (vbICA1 equivalent) can be found at http://www.inference.phy.cam.ac.uk/jwm1003/.
+
+
+
+
+*************
+* Interface *
+*************
+
+All the algorithms have more or less the same interface:
+
+
+Necessary parameters:
+
+data        Number rows = Number sensors 
+            Number columns = Number data points
+
+states      MixModel1d: A single number that represents the number of 
+            components in the mixture model.
+            vbICA: A vector that represents the number of states per 
+            source model eg [2 4 3 5] for 4 sources.
+            vbMoICA/vbHMM: A cell array of vectors, where each vector
+            represents the number of states per source model in an ICA.
+
+
+
+Optional parameters: 
+
+source_type Mixture of 'g'aussians     (Default)
+            Mixture of 'e'xponentials
+            Mixture of 't'runcated gaussians
+            'hg','he','ht' - HMM versions
+
+SEE_PDFS    1: Observe evolution of source probability density functions
+            0: Don't observe evolution (Default)
+
+tol         Convergence tolerance for delta_energy (Default = 0.0001)  
+ 
+max_steps   Maximum number of steps before stopping (Default = 500)
+
+isonoise    1: learn isotropic noise   (Default)
+            0: learn non-isotropic diagonal noise. Non-isotropic noise
+               estimates require more data than isotropic noise to infer
+               accurately and converge more slowly.
+
+ARD:        1: Automatic Relevance Determination is ON.   (Default)
+            0: Automatic Relevance Determination is OFF.
+
+POS_SRC     1: learn positive bases  (Default for 'e', 't')   
+            0: learn any bases       (Default for 'g')
+
+POS_MIX     1: learn positive mixing matrix (Default for 'e', 't') 
+            0: learn any mixing matrix.     (Default for 'g')
+
+nets        vbMoica and vbHMM only. Can pass over a cell array of 
+            pre-learned vbICA2 models for better initialisation.
+
+
+
+Details of the theory and mathematics can be found in the publications referenced at the end of this file. All user information should be available via the normal 'help function.m' call in MATLAB. Although I have endeavoured to comprehensively comment my code, these comments may not all be understandable, so apologies in advance. Over the past 1-2 years, I have eradicated as many bugs as I can find, but I do not guarantee the code is 100% bug-free, so BEWARE!
+
+
+
+
+*********
+* Notes *
+*********
+
+1) It is recommended that data be centered and normalised to unit variance before being presented to vbICA. Although by no means necessary, it avoids potential numerical over/underflow. Use 'normalise.m' in directory 'utils'. Positive data can be scaled to lie between 0-1 using 'scale01.m' in 'utils'.
+
+
+2)vbICA1 is largely redundant as vbICA2 is more robust and accurate (particularly with noisy data) and is the basis for vbMoICA and vbHMM. However, vbICA1 is faster so may be adequate for less noisy data.
+
+
+3) The core vbICA models incorporate Automatic Relevance Determination (ARD) which use hierarchical Bayesian priors on the mixing matrix to suppress sources that are not supported by the data. This does not work well with very noisy data (>7% noise by variance). In this case, ARD can be used to narrow down the possible source dimensionality to a range. The negative free energy of models trained across this range can then be used to infer the most likely number of sources.
+
+
+4) The negative free energy is calculated using a simplified expression that assumes all the posteriors have been optimised simultaneously. The ebnefit is that it is computationally more efficient as it doesn't need to make a call to the digamma function. The downside is that the NFE may not be monotonic when the parameters are changing rapidly.
+
+
+5) Initialisation for the ICA part is set at 'SVD' for initial source extraction and 'Kmeans' for 'g', 'hg' initialisation. This can be changed to 'rand' for source extraction and 'co_mean', 'rand' for MoG intialisation in the 'intialise_ica.m' file in the 'Shared' directory. 'rand' is useful for highly correlated data and `co_mean' for audio signals. Priors are extracted by intialisation or can be set by hand in 'intialise_ica.m'. Non-negative vbICA is intialised randomly.
+
+
+6) The posterior density is factorised across sources and parameters in the variational Bayes framework. This allows tractability, but reduces the effectiveness of vbICA on highly correlated data. This can be overcome to a certain extent by initialising randomly or by decorrelating the data first using 'decorr.m' in 'utils'. More information can be found in Chapter 5 of [1].
+
+
+7) Initialisation for vbMoICA and vbHMM is via the Gaussian Mixture Model routine of NETLAB, available from http://www.ncrg.aston.ac.uk/netlab/. NETLAB must be on your path for this initialisation to occur.
+ 
+
+
+
+Rizwan Choudrey
+21st June 2003
+
+
+
+
+
+
+
+The publications below and other related papers are available from 
+http://www.robots.ox.ac.uk/~riz/pubs.html.
+
+
+[1] R.A. Choudrey (2002)
+    'Variational methods for Bayesian Independent Componenet Analysis'.
+    Thesis, submitted Michaelmas term 2002, University of Oxford.
+
+[2] R.A. Choudrey, W.D. Penny & S.J. Roberts (2000) 
+    'An Ensemble Learning Approach to Independent Component Analysis'. 
+    Proceedings of Neural Networks for Signal Processing, Sydney, Australia    , December 2000.
+
+[3] R.A. Choudrey & S.J. Roberts (2001) 
+    'Flexible Bayesian Independent Component Analysis for Blind Source 
+    Separation'. Proceedings of ICA-2001, San Diego, USA, December 2001.
+
+[4] R.A. Choudrey & S.J. Roberts (2003)
+    'Variational Mixture of Bayesian Independent Component Analysers'. 
+    Neural Computation 15(1).
+
+[5] R.A. Choudrey & S.J. Roberts (2003)
+    'Bayesian ICA with Hidden Markov Model Sources'. 
+    Proceedings of ICA-2003, Nara, Japan, April 2003.
+
+[6] R.A. Choudrey & S.J. Roberts (2003) 
+    'Learning Hierarchical Dynamics using Independent Component Analsysis'.    Proceedings of ICA-2003, Nara, Japan, April 2003.
+
