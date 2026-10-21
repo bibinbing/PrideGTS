@@ -50,5 +50,5 @@ PrideGTS includes the following third-party code. Each component keeps its origi
 
 ## Contact
 
-- Xianpeng Huang, Guilin University of Technology (2640355140@qq.com)
-- Chaoming Liao, Wuhan University (164981263@qq.com)
+- Xianpeng Huang, Guilin University of Technology (gnsshxp20@glut.edu.cn or 2640355140@qq.com)
+- Chaoming Liao, Wuhan University (liaochaoming@nnnu.edu.cn or 164981263@qq.com)
