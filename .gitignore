@@ -10,7 +10,6 @@
 
 # Compiled and generated artifacts
 *.mex*
-*.mlappinstall
 *.mltbx
 *.p
 slprj/
