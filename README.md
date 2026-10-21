@@ -28,7 +28,7 @@ PrideGTS (Pride GNSS Time Series Analysis Software) is open-source MATLAB softwa
 
 ## Documentation
 
-See the [user manual](docs/PrideGTS_Software_User_Manual_EN.pdf). It includes a step-by-step example with the sample data in `sample_data/`.
+See the [user manual](doc/PrideGTS_Software_User_Manual_EN.pdf). It includes a step-by-step example with the sample data in `sample_data/`.
 
 ## Third-party components
 
