@@ -4,32 +4,65 @@
 *.m~
 *.autosave
 *.slxc
-# Compiled files
+*.sld
+*.mdl
+*.slx.autosave
+
+# Compiled and generated artifacts
 *.mex*
 *.mlappinstall
 *.mltbx
+*.p
 slprj/
 codegen/
 sccprj/
 helpsearch*/
-# MATLAB Compiler output
 *_mcr/
 for_redistribution/
 for_redistribution_files_only/
 for_testing/
+
+# MATLAB figures / exported outputs
+*.fig
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.log
+*.tmp
+*.bak
+
+# ===== C / build outputs =====
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+*.exe
 
 # ===== OS files =====
 Thumbs.db
 desktop.ini
 .DS_Store
 ~$*
+*.swp
+*.swo
 
 # ===== Editors =====
 .vscode/
 .idea/
+*.code-workspace
 
-# ===== Project-specific (edit as needed) =====
-# Runtime outputs, logs and temporary files
-*.log
+# ===== Project-specific =====
+# Common output / scratch directories for analysis workflows
+results/
+output/
+outputs/
+temp/
+tmp/
+cache/
+
+# Uncomment if you do not want to version generated artifacts locally
 # results/
 # temp/
+# output/
