@@ -40,7 +40,7 @@ PrideGTS incorporates the following third-party source code. The repository keep
 | FastICA 2.5 | Hyvärinen (1999) | GPL-2.0-or-later | Copyright notice kept in source |
 | VBRPCA | Babacan et al. (2012) | GPL-3.0-or-later | GPL notice kept in source header |
 | VBPCA | Ilin and Raiko (2010) | No license stated | Copyright held by the original authors |
-| vbICA 1.0 and Netlab | Choudrey (2003); Nabney (2002) | Netlab: BSD-3-Clause |  |
+| vbICA 1.0 and Netlab | Choudrey (2003); Nabney (2002) | Netlab: BSD-3-Clause | --- |
 | RegEM | Schneider (2001) | No license stated | Default parameters modified |
 | GMIS (KKF) | Liu et al. (2018) | No license stated | https://doi.org/10.1007/s10291-017-0689-3 |
 
