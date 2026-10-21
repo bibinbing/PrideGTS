@@ -4,7 +4,7 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)
 ![License](https://img.shields.io/badge/license-GPL--3.0-green)
 
-PrideGTS (Pride GNSS Time Series Analysis Software) is open-source MATLAB software for GNSS coordinate time series analysis. In one graphical interface it covers the processing from multi-source coordinate file input to parameter estimation.
+PrideGTS (Pride GNSS Time Series Analysis Software) is open-source MATLAB software for GNSS coordinate time series analysis. In one graphical interface it covers the processing from multi-source coordinate time series data to environmental loading correction, noise modeling, and time series analysis.
 
 ## Features
 
@@ -32,21 +32,21 @@ See the [user manual](doc/PrideGTS_Software_User_Manual_EN.pdf). It includes a s
 
 ## Third-party components
 
-PrideGTS includes the following third-party code. Each component keeps its original copyright notice.
+PrideGTS incorporates the following third-party source code. The repository keeps the original copyright notices in the corresponding source files whenever available. Components marked as "See original distribution" are included from their original upstream distributions; their full license terms should be checked in the original upstream project before redistribution or commercial reuse.
 
-| Component | Reference | License |
-|---|---|---|
-| Hector 2.1 | Bos et al. (2013) | GPL-3.0-or-later |
-| FastICA 2.5 | Hyvärinen (1999) | GPL-2.0-or-later |
-| VBRPCA | Babacan et al. (2012) | GPL-3.0-or-later |
-| VBPCA | Ilin and Raiko (2010) | See original distribution |
-| vbICA 1.0 and Netlab | Choudrey (2003); Nabney (1996–2001) | See original distribution; BSD-3-Clause |
-| RegEM | Schneider (2001) | See original distribution |
-| GMIS (KKF) | Liu et al. (2018) | See original distribution |
+| Component | Reference | License | Notes |
+|---|---|---|---|
+| Hector 2.1 | Bos et al. (2013) | GPL-3.0-or-later | Explicit GPL notice appears in the upstream source distribution |
+| FastICA 2.5 | Hyvärinen (1999) | GPL-2.0-or-later | Included as a third-party algorithm in this repository |
+| VBRPCA | Babacan et al. (2012) | GPL-3.0-or-later | Explicit GPL notice is present in the source header |
+| VBPCA | Ilin and Raiko (2010) | See original distribution | Upstream license text should be verified in the original source distribution |
+| vbICA 1.0 and Netlab | Choudrey (2003); Nabney (1996–2001) | See original distribution; BSD-3-Clause | License terms depend on the original distribution |
+| RegEM | Schneider (2001) | See original distribution | Upstream license text should be verified in the original source distribution |
+| GMIS (KKF) | Liu et al. (2018) | See original distribution | Upstream license text should be verified in the original source distribution |
 
 ## License
 
-[GNU General Public License v3.0](LICENSE)
+[PrideGTS is distributed under the GNU General Public License v3.0](LICENSE)
 
 ## Contact
 
